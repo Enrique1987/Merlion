@@ -80,7 +80,7 @@ transform used to process the data before giving it to the model, if the `transf
 given when initializing the config.
 
 See our implementation of [SARIMA](merlion/models/forecast/sarima.py) for a fairly simple example of what this looks
-like in practice, and this [notebook](examples/forecast/ForecastNewModel.ipynb) for a step-by-step walkthrough of a
+like in practice, and this [notebook](examples/forecast/3_ForecastNewModel.ipynb) for a step-by-step walkthrough of a
 minimal example.
 
 ### Forecaster-Based Anomaly Detectors
@@ -125,8 +125,7 @@ Check the implementations of [`DifferenceTransform`](merlion/transform/moving_av
 [`PowerTransform`](merlion/transform/normalize.py#L123), and [`LowerUpperClip`](merlion/transform/bound.py)
 for a few examples. Add your transforms to whatever module you feel is most appropriate, or create a new file if it
 doesn't fit in with any of the existing ones. However, if you do add a new file, make sure to add it to the API docs
-by updating the autosummary block of [`merlion/transform/__init__.py`](merlion/transform/__init__.py), and adding the
-new module to the Sphinx ReST file [`docs/source/merlion.transform.rst`](docs/source/merlion.transform.rst). 
+by adding the new module to the Sphinx ReST file [`docs/source/merlion.transform.rst`](docs/source/merlion.transform.rst).
 
 ## Datasets
 You can add support for a new dataset of time series by implementing an appropriate data loading class in
